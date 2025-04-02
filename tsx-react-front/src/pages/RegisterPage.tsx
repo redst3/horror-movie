@@ -35,7 +35,7 @@ function LoginPage() {
 	) => {
 		e.preventDefault();
 		if (
-			username.length > 5 &&
+			username.length > 1 &&
 			password.length > 8 &&
 			password.match(/[0-9]/g) &&
 			password === passwordRepeat
