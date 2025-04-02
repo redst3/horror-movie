@@ -19,16 +19,23 @@ A full-stack horror movie listing website built with **NestJS** for the backend 
 1. Install dependencies:
 
    ```sh
+   cd nestjs-back
    npm install
    ```
 
 2. Create a `.env` file in the **nestjs-back** main directory and add the required environment variables.
 
-   - Generate a JWT secret key from [jwtsecret.com](https://jwtsecret.com/generate)
-   - Create a **Neon Console** account or log in with GitHub
+   - Generate a JWT secret key from **[jwtsecret.com](https://jwtsecret.com/generate)**
+   - Create a **[Neon Serverless Postgres](https://neon.tech)** account or log in with GitHub
    - Create a new PostgreSQL **(version 17)** project
    - Specify the database name and region
    - Get the connection details and add them to your `.env` file
+   - Your `.env` file should look like this:
+     
+   ```sh
+   DATABASE_URL="your database url that you got from Neon Console"
+   JWT_SECRET="your jwt secret token"
+   ```
 
 3. Setup Prisma ORM:
 
@@ -49,6 +56,7 @@ A full-stack horror movie listing website built with **NestJS** for the backend 
 1. Install dependencies:
 
    ```sh
+   cd tsx-react-front
    npm install
    ```
 
@@ -64,5 +72,10 @@ A full-stack horror movie listing website built with **NestJS** for the backend 
 
 - If port **5173** is unavailable, change the backend port in:
   - **/nestjs-back/main.ts**
+- Or simply kill the existing port using
+  ```sh
+   netstat -ano | findstr :<PORT>
+   taskkill /PID <PID> /F
+  ```
 
 ---
