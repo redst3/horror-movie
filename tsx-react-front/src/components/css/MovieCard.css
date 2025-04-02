@@ -1,0 +1,75 @@
+.movie-card {
+	position: relative;
+	border-radius: 5px;
+	overflow: hidden;
+	transition: 0.4s;
+	cursor: pointer;
+	background-color: black;
+	.movie-poster {
+		position: relative;
+		.movie-overlay {
+			position: absolute;
+			opacity: 0;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(
+				to bottom,
+				rgba(0, 0, 0, 0.1),
+				rgba(0, 0, 0, 0.5)
+			);
+			transition: opacity 0.5s;
+			user-select: none;
+		}
+		.movie-overlay:hover {
+			opacity: 1;
+		}
+		img {
+			width: 100%;
+			height: 30em;
+			user-select: none;
+		}
+		.favorite-btn {
+			position: absolute;
+			top: 0;
+			right: 0;
+			margin: 20px 20px;
+			font-size: 30px;
+			border: none;
+			background-color: transparent;
+			color: white;
+			cursor: pointer;
+			transform: scale(1.5);
+			transition: 0.2s;
+		}
+		.favorite-btn:hover {
+			transform: scale(1.3);
+			color: red;
+		}
+		.active {
+			color: red;
+		}
+		.active:hover {
+			transform: scale(1.5);
+			color: white;
+		}
+	}
+	.movie-info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		color: white;
+		padding: 1em;
+		height: 7.5rem;
+		letter-spacing: 1.5px;
+
+		.date-rating {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+}
+.movie-card:hover {
+	transform: scale(1.05, 1.05);
+}

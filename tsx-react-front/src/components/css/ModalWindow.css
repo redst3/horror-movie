@@ -1,0 +1,132 @@
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(255, 255, 255, 0.3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal-window {
+	background-color: rgb(24, 23, 23);
+	width: 70%;
+	height: 90%;
+	border-radius: 5px;
+	padding: 10px;
+	overflow-y: scroll;
+	outline: none;
+	button {
+		font-size: 3rem;
+		border: none;
+		background-color: transparent;
+		cursor: pointer;
+		transition: transform 0.2s ease;
+		color: white;
+		padding-left: 2rem;
+	}
+	button:hover {
+		transform: scale(1.1);
+	}
+}
+.modal-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: white;
+	h1 {
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+	.modal-info {
+		gap: 3rem;
+
+		.modal-left {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			img {
+				max-height: 60vh;
+				object-fit: contain;
+				border-radius: 5px;
+				box-shadow: 1px 2px 4px rgba(0, 0, 0, 0.7);
+			}
+		}
+
+		.modal-right {
+			p {
+				font-size: 1.5rem;
+				text-align: justify;
+			}
+			padding: 1rem;
+			.release-rating {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 2rem;
+				p {
+					font-size: 2rem;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.modal-content {
+		h1 {
+			font-size: 2rem;
+			padding-bottom: 1rem;
+		}
+		.modal-info {
+			flex-direction: column;
+			gap: 3rem;
+			.modal-left {
+				img {
+					max-height: 50vh;
+				}
+			}
+			.modal-right {
+				p {
+					font-size: 1.25rem;
+				}
+				.release-rating {
+					margin-top: 2rem;
+					p {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+}
+@media (max-width: 900px) {
+	.modal-content {
+		h1 {
+			font-size: 1.5rem;
+			padding-bottom: 0.75rem;
+		}
+		.modal-info {
+			flex-direction: column;
+			gap: 3rem;
+			.modal-left {
+				img {
+					max-height: 40vh;
+				}
+			}
+			.modal-right {
+				p {
+					font-size: 1rem;
+				}
+				.release-rating {
+					margin-top: 2rem;
+					p {
+						font-size: 2rem;
+					}
+				}
+			}
+		}
+	}
+}

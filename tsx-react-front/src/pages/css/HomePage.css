@@ -1,0 +1,260 @@
+.homepage {
+	.home-hero {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		position: relative;
+		overflow: hidden;
+		padding: 1em;
+		.home-background-photo {
+			width: 100vw;
+			height: 100vh;
+			position: absolute;
+			z-index: -1;
+			background-repeat: repeat;
+			background-image: url('../../assets/background.webp');
+		}
+		.home-figure {
+			display: flex;
+			opacity: 0.95;
+			height: 100vh;
+			width: 60vw;
+			transition: ease-in-out 0.4s;
+		}
+		.home-text {
+			display: flex;
+			flex-direction: column;
+			width: 75%;
+			height: 75%;
+			text-align: center;
+			align-items: center;
+			background-color: rgba(15, 16, 18, 0.6);
+			border-radius: 2rem;
+			padding: 2rem;
+			gap: 2.5rem;
+			overflow: hidden;
+
+			h1 {
+				color: rgb(253, 2, 2);
+				font-size: 2rem;
+			}
+			p {
+				color: white;
+				text-align: justify;
+				font-size: 1.25rem;
+			}
+			.button {
+				display: flex;
+				align-items: center;
+				outline: 0;
+				cursor: pointer;
+				border: none;
+				padding: 1rem;
+				border-radius: 7px;
+				background-color: #010305;
+				color: white;
+				font-weight: bold;
+				font-size: 1.5rem;
+				box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.39);
+				transition: 0.3s;
+			}
+			.button:hover {
+				background-color: white;
+				color: black;
+				transform: scale(0.95, 0.95);
+				opacity: 0.8;
+			}
+		}
+	}
+	.home-movies {
+		height: 100vh;
+		padding: 3rem;
+		.movies-title {
+			display: flex;
+			align-items: center;
+			gap: 3em;
+			h1 {
+				color: white;
+				letter-spacing: 3px;
+				user-select: none;
+			}
+			input {
+				color: white;
+				background: none;
+				border: none;
+				font-size: 1.2em;
+				width: 80%;
+				outline: none;
+			}
+			input:hover {
+				border-bottom: solid 1px;
+			}
+			input:focus {
+				border-bottom: solid 1px;
+			}
+			.movies-sort {
+				color: white;
+				font-size: 20px;
+				position: relative;
+				margin-right: 2rem;
+				.sort-button {
+					width: 100px;
+					user-select: none;
+					cursor: pointer;
+				}
+				.sort-box {
+					position: absolute;
+					background-color: rgba(255, 255, 255, 0.8);
+					border-radius: 5px;
+					width: 100px;
+					height: 100px;
+					z-index: 999;
+					color: black;
+					align-items: left;
+					flex-direction: column;
+					display: flex;
+					p {
+						font-weight: bold;
+						transition: 0.1s;
+						cursor: pointer;
+						margin-left: 0.25rem;
+					}
+					p:hover {
+						transform: scale(1.06);
+					}
+				}
+				.sort-button:hover {
+					color: rgb(253, 2, 2);
+				}
+			}
+		}
+		.movies-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+			padding-top: 2rem;
+			padding-bottom: 2rem;
+			gap: 2rem;
+		}
+		.movies-grid-text {
+			color: white;
+			font-size: 1.5rem;
+			width: 50vw;
+		}
+	}
+}
+@media (max-width: 768px) {
+	.homepage {
+		.home-movies {
+			.movies-grid {
+				grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+			}
+			.movies-title {
+				gap: 1rem;
+				.movies-sort {
+					color: white;
+					font-size: 15px;
+					width: 50px;
+					.sort-box {
+						width: 70px;
+						height: 70px;
+					}
+				}
+				input {
+					max-width: 450px;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 1200px) {
+	.homepage {
+		.home-hero {
+			.home-figure {
+				transform: translateX(-100vw);
+				width: 0;
+				overflow: hidden;
+			}
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	.homepage {
+		.home-hero {
+			.home-text {
+				width: 65%;
+				height: 65%;
+			}
+		}
+	}
+}
+@media (max-width: 800px) {
+	.homepage {
+		.home-hero {
+			.home-text {
+				h1 {
+					font-size: 2rem;
+				}
+				p {
+					font-size: 1rem;
+				}
+				.button {
+					font-size: 1.75rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 900px) {
+	.homepage {
+		.home-hero {
+			.home-text {
+				h1 {
+					font-size: 3rem;
+				}
+				p {
+					font-size: 1.25rem;
+				}
+				.button {
+					font-size: 2rem;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1400px) {
+	.homepage {
+		.home-hero {
+			.home-text {
+				h1 {
+					font-size: 3.5rem;
+				}
+				p {
+					font-size: 2rem;
+				}
+				.button {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+}
+@media (min-width: 2000px) {
+	.homepage {
+		.home-hero {
+			.home-text {
+				h1 {
+					font-size: 4rem;
+				}
+				p {
+					font-size: 3rem;
+				}
+				.button {
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+}

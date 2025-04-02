@@ -1,0 +1,42 @@
+.favorites {
+	height: 100vh;
+	padding: 3rem;
+	.favorites-title {
+		font-size: 1.5rem;
+		color: white;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+	.movies-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		gap: 2rem;
+	}
+	.movies-grid-redirect {
+		display: flex;
+		width: 100%;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		.link-button {
+			background-color: #ea2e0d;
+			color: white;
+			padding: 1rem 2rem;
+			border-radius: 5px;
+			cursor: pointer;
+			text-decoration: none;
+			font-size: 1rem;
+			transition: background-color 0.2s;
+			transition: ease 0.2s;
+		}
+		.link-button:hover {
+			background-color: #972c05;
+			transform: scale(1.05);
+		}
+	}
+	.movies-grid-text {
+		color: white;
+	}
+}

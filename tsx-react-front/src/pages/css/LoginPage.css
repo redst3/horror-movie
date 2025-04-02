@@ -1,0 +1,94 @@
+.login-page {
+	background-image: url('../../assets/background.webp');
+	width: 100%;
+	height: 100vh;
+	.login-form {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		background-color: rgba(15, 16, 18, 0.6);
+		padding: 20px;
+		border-radius: 10px;
+		form {
+			padding: 3rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.login-form-title {
+			text-align: center;
+			font-size: 24px;
+			font-weight: 700;
+			margin-bottom: 20px;
+			color: white;
+		}
+		.login-form-input {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			outline: none;
+		}
+		.login-form-button {
+			width: 50%;
+			padding: 10px;
+			border: none;
+			border-radius: 5px;
+			background-color: #7f0202;
+			color: #fff;
+			font-size: 16px;
+			font-weight: 700;
+			cursor: pointer;
+			outline: none;
+			transition: 0.3s;
+		}
+		.login-form-button:hover {
+			transform: scale(0.95, 0.95);
+			opacity: 0.8;
+		}
+		.login-form-register {
+			color: white;
+			font-size: 16px;
+			a {
+				color: #7f0202;
+				text-decoration: none;
+			}
+		}
+		.password-info {
+			color: white;
+			font-size: 12px;
+			background-color: rgba(15, 16, 18, 0.8);
+			padding: 0.5rem;
+			border-radius: 5px;
+			.valid {
+				color: green;
+			}
+		}
+		.spinner {
+			border: 5px solid #ffffff;
+			border-top: 3px solid #740000;
+			border-radius: 50%;
+			width: 40px;
+			height: 40px;
+			animation: spin 2s linear infinite;
+		}
+		.error-message {
+			color: white;
+			font-size: 10px;
+		}
+	}
+}
+
+@keyframes spin {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
