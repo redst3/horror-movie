@@ -36,6 +36,7 @@ const movieSlice = createSlice({
 		},
 		sortMovies: (state, action) => {
 			const query = action.payload;
+			if (!state.movies) return;
 			const sortedMovies = [...state.movies];
 			const sortedFilteredMovies = [...state.filteredMovies];
 			if (sortedFilteredMovies.length > 0) {

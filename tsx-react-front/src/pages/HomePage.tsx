@@ -138,7 +138,7 @@ function HomePage() {
 						</div>
 					</div>
 					{!loading ? (
-						!error ? (
+						!error && movies ? (
 							<div className='movies-grid'>
 								{searchBar.length === 0 ? (
 									movies.map((movie: Movie) => (
